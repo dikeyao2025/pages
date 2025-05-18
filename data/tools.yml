@@ -1,0 +1,134 @@
+---
+# 效率工具导航配置文件
+
+- taxonomy: 常用推荐
+  icon: far fa-star
+  links: 
+    - title: 语雀
+      logo: 语雀.webp
+      url: https://www.yuque.com/
+      description: 专业的云端知识库。
+    - title: QQ 邮箱
+      logo: qq邮箱.png
+      url: http://mail.qq.com/
+      description: 腾讯 QQ 邮箱。
+    - title: GitHub
+      logo: github.png
+      url: https://github.com/
+      description: GitHub 开源社区。
+    - title: 搜狗微信
+      logo: 搜狗微信.jpg
+      url: https://weixin.sogou.com/
+      description: 搜狗微信搜索，一搜即达。
+    - title: 知乎
+      logo: 知乎.png
+      url: https://www.zhihu.com/
+      description: 知乎社区。
+
+- taxonomy: 开发设计
+  icon: fas fa-code fa-lg
+  list:
+    - term: 代码开发
+      links:
+        - title: Visual Studio Code
+          logo: vscode.png
+          url: https://code.visualstudio.com/
+          description: 微软开源的轻量级代码编辑器。
+        - title: GitHub Copilot
+          logo: github-copilot.png
+          url: https://github.com/features/copilot
+          description: AI 辅助编程工具。
+        - title: Stack Overflow
+          logo: stackoverflow.png
+          url: https://stackoverflow.com/
+          description: 全球最大的程序员问答社区。
+        - title: CodePen
+          logo: codepen.png
+          url: https://codepen.io/
+          description: 前端代码在线编辑与分享平台。
+    - term: 设计工具
+      links:
+        - title: Figma
+          logo: figma.png
+          url: https://www.figma.com/
+          description: 专业的在线协作设计工具。
+        - title: Canva可画
+          logo: canva.png
+          url: https://www.canva.cn/
+          description: 简单易用的平面设计工具。
+        - title: 创客贴
+          logo: chuangkit.png
+          url: https://www.chuangkit.com/
+          description: 极简设计工具，海量模板。
+
+- taxonomy: 办公助手
+  icon: fas fa-briefcase fa-lg
+  list:
+    - term: 文档协作
+      links:
+        - title: 腾讯文档
+          logo: 腾讯文档.png
+          url: https://docs.qq.com/
+          description: 腾讯在线协作文档。
+        - title: 石墨文档
+          logo: 石墨文档.png
+          url: https://shimo.im/
+          description: 企业在线协同办公平台。
+        - title: Google文档
+          logo: google-docs.png
+          url: https://docs.google.com/
+          description: Google云端文档服务。
+        - title: 印象笔记
+          logo: yinxiang.png
+          url: https://www.yinxiang.com/
+          description: 跨平台笔记与知识管理工具。
+    - term: 效率工具
+      links:
+        - title: 滴答清单
+          logo: dida.png
+          url: https://www.dida365.com/
+          description: 跨平台待办事项与时间管理。
+        - title: Trello
+          logo: trello.png
+          url: https://trello.com/
+          description: 可视化项目管理工具。
+        - title: ProcessOn
+          logo: ProcessOn.png
+          url: https://www.processon.com/
+          description: 免费在线作图，思维导图、流程图。
+
+- taxonomy: 学习资源
+  icon: fas fa-graduation-cap fa-lg
+  list:
+    - term: 编程学习
+      links:
+        - title: 慕课网
+          logo: imooc.png
+          url: https://www.imooc.com/
+          description: 程序员的实战视频课程。
+        - title: 极客时间
+          logo: geekbang.png
+          url: https://time.geekbang.org/
+          description: 高质量的IT技术学习平台。
+        - title: LeetCode
+          logo: leetcode.png
+          url: https://leetcode.cn/
+          description: 编程能力训练平台。
+        - title: 菜鸟教程
+          logo: runoob.png
+          url: https://www.runoob.com/
+          description: 提供编程的基础技术教程。
+    - term: 通用学习
+      links:
+        - title: 中国大学MOOC
+          logo: icourse163.png
+          url: https://www.icourse163.org/
+          description: 国家精品课程在线学习平台。
+        - title: Coursera
+          logo: coursera.png
+          url: https://www.coursera.org/
+          description: 全球化的大型开放式在线课堂。
+        - title: 学堂在线
+          logo: xuetangx.png
+          url: https://www.xuetangx.com/
+          description: 清华大学创办的MOOC平台。 

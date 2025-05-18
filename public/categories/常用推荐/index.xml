@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>常用推荐 on WebStack-Hugo 网址导航</title>
+    <link>http://localhost:1313/categories/%E5%B8%B8%E7%94%A8%E6%8E%A8%E8%8D%90/</link>
+    <description>Recent content in 常用推荐 on WebStack-Hugo 网址导航</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%B8%B8%E7%94%A8%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>效率工具</title>
+      <link>http://localhost:1313/tools/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tools/</guid>
+      <description>&lt;p&gt;这里是效率工具导航页面，汇集了各类优质在线工具和资源，助您提升工作学习效率。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

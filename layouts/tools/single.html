@@ -1,0 +1,143 @@
+{{ partial "header.html" . }}
+
+{{ partial "sidebar.html" . }}
+
+{{ partial "content_header.html" . }}
+
+<div id="content" class="content-site customize-site">
+    <!-- 工具页面内容 - 移除顶部多余的标题和图标 -->
+    
+    <!-- 使用tools.yml数据文件来显示工具，显示方式与首页相同 -->
+    {{ range .Site.Data.tools }}
+        {{ if .list }}
+            {{ range .list }}
+            <div class="d-flex flex-fill">
+                <h4 class="text-gray text-lg mb-4">
+                    <i class="site-tag iconfont icon-tag icon-lg mr-1" id="{{ md5 .term }}"></i>
+                    {{ .term }}
+                </h4>
+                <div class="flex-fill"></div>
+            </div>
+            <div class="row">
+                {{ range .links }}
+                <div class="url-card col-6 col-sm-6 col-md-4 col-xl-5a col-xxl-6a">
+                    <div class="url-body default">
+                        {{ if .qrcode }}
+                            {{ if findRE "http.*?(.|\n)*?" .qrcode }}
+                            <a href="javascript:" target="" class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-html="true" 
+                                title="<img src='{{ .qrcode }}' width='128'>">
+                            {{ else }}
+                                <a href="javascript:" target="" class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                title="<img src='{{ absURL $.Site.Params.logosPath }}/{{ .qrcode }}' width='128'>">
+                            {{ end }}
+                        {{ else }}
+                            <a href="{{ .url }}" target="_blank" data-id="" data-url="{{ .url }}"
+                            class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-original-title="{{ .description }}">
+                        {{ end }}
+                            <div class="card-body">
+                                <div class="url-content d-flex align-items-center">
+                                    <div class="url-img mr-2 d-flex align-items-center justify-content-center">
+                                        {{ if findRE "http.*?(.|\n)*?" .logo }}
+                                            {{ if $.Site.Params.defaultLogo }}
+                                            <img class="lazy" src="{{ .logo }}" data-src="{{ .logo }}"
+                                                onerror="javascript:this.src='{{ absURL $.Site.Params.defaultLogo }}'" alt="{{ .title }}">
+                                            {{ else }}
+                                            <img class="lazy" src="{{ .logo }}" data-src="{{ .logo }}"
+                                                onerror="javascript:this.src='{{ .logo }}'" alt="{{ .title }}">
+                                            {{ end }}
+                                        {{ else }}
+                                            {{ if $.Site.Params.defaultLogo }}
+                                            <img class="lazy" src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}" data-src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}"
+                                                onerror="javascript:this.src='{{ absURL $.Site.Params.defaultLogo }}'" alt="{{ .title }}">
+                                            {{ else }}
+                                            <img class="lazy" src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}" data-src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}"
+                                                onerror="javascript:this.src='{{ absURL $.Site.Params.logosPath }}/{{ .logo }}'" alt="{{ .title }}">
+                                            {{ end }}
+                                        {{ end }}
+                                    </div>
+                                    <div class="url-info flex-fill">
+                                        <div class="text-sm overflowClip_1">
+                                            <strong>{{ .title }}</strong>
+                                        </div>
+                                        <p class="overflowClip_1 m-0 text-muted text-xs">{{ .description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{{ .url }}" class="togo text-center text-muted is-views" data-toggle="tooltip" data-placement="right" title="直达" rel="nofollow">
+                            <i class="iconfont icon-goto"></i>
+                        </a>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        {{ else }}
+            <div class="d-flex flex-fill">
+                <h4 class="text-gray text-lg mb-4">
+                    <i class="site-tag iconfont icon-tag icon-lg mr-1" id="{{ md5 .taxonomy }}"></i>
+                    {{ .taxonomy }}
+                </h4>
+            </div>
+            <div class="row">
+                {{ range .links }}
+                <div class="url-card col-6 col-sm-6 col-md-4 col-xl-5a col-xxl-6a">
+                    <div class="url-body default">
+                        {{ if .qrcode }}
+                            {{ if findRE "http.*?(.|\n)*?" .qrcode }}
+                            <a href="javascript:" target="" class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-html="true" 
+                                title="<img src='{{ .qrcode }}' width='128'>">
+                            {{ else }}
+                                <a href="javascript:" target="" class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-html="true"
+                                title="<img src='{{ absURL $.Site.Params.logosPath }}/{{ .qrcode }}' width='128'>">
+                            {{ end }}
+                        {{ else }}
+                            <a href="{{ .url }}" target="_blank" data-id="" data-url="{{ .url }}" 
+                            class="card no-c mb-4" data-toggle="tooltip" data-placement="bottom" data-original-title="{{ .description }}">
+                        {{ end }}
+                            <div class="card-body">
+                                <div class="url-content d-flex align-items-center">
+                                    <div class="url-img mr-2 d-flex align-items-center justify-content-center">
+                                        {{ if findRE "http.*?(.|\n)*?" .logo }}
+                                            {{ if $.Site.Params.defaultLogo }}
+                                            <img class="lazy" src="{{ .logo }}" data-src="{{ .logo }}"
+                                                onerror="javascript:this.src='{{ absURL $.Site.Params.defaultLogo }}'" alt="{{ .title }}">
+                                            {{ else }}
+                                            <img class="lazy" src="{{ .logo }}" data-src="{{ .logo }}"
+                                                onerror="javascript:this.src='{{ .logo }}'" alt="{{ .title }}">
+                                            {{ end }}
+                                        {{ else }}
+                                            {{ if $.Site.Params.defaultLogo }}
+                                            <img class="lazy" src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}" data-src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}"
+                                                onerror="javascript:this.src='{{ absURL $.Site.Params.defaultLogo }}'" alt="{{ .title }}">
+                                            {{ else }}
+                                            <img class="lazy" src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}" data-src="{{ absURL $.Site.Params.logosPath }}/{{ .logo }}"
+                                                onerror="javascript:this.src='{{ absURL $.Site.Params.logosPath }}/{{ .logo }}'" alt="{{ .title }}">
+                                            {{ end }}
+                                        {{ end }}
+                                    </div>
+                                    <div class="url-info flex-fill">
+                                        <div class="text-sm overflowClip_1">
+                                            <strong>{{ .title }}</strong>
+                                        </div>
+                                        <p class="overflowClip_1 m-0 text-muted text-xs">{{ .description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{{ .url }}" class="togo text-center text-muted is-views" data-toggle="tooltip" data-placement="right" title="直达" rel="nofollow">
+                            <i class="iconfont icon-goto"></i>
+                        </a>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    {{ end }}
+</div>
+
+{{ partial "content_footer.html" . }}
+
+{{ partial "modal_search.html" . }}
+
+{{ partial "footer.html" . }}

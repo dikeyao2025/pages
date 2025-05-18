@@ -1,0 +1,27 @@
+- item: 首页
+  icon: fa fa-home
+  link: "./"
+
+- item: 效率工具
+  icon: fa fa-wrench
+  link: "./tools/"
+  list:
+    - name: 开发设计
+      url: "./tools/#开发设计"
+    - name: 科研办公
+      url: "./tools/#科研办公"
+    - name: 资讯学习
+      url: "./tools/#资讯学习"
+
+- item: 作者
+  icon: fa fa-book
+  link: https://weiyan.cc/
+
+- item: 关于
+  icon: fa fa-cog
+  link: ""
+  list:
+    - name: 教程
+      url: https://github.com/shenweiyan/Knowledge-Garden/discussions/10
+    - name: 源码
+      url: https://github.com/shenweiyan/WebStack-Hugo
